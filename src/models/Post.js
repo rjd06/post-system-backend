@@ -21,7 +21,7 @@ const commentSchema = new mongoose.Schema({
         required: true,
     },
     text: {
-        text: String,
+        type: String,
         default: "",
     },
     articleHtml:{

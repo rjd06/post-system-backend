@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {protect} from "../middleware/auth.js"
 import {upload } from "../services/cloudinary.js";
-import { createPost, getPosts, getPostById, likeToggle, addComment } from "../controllers/post.controller";
+import { createPost, getPosts, getPostById, likeToggle, addComment } from "../controllers/post.controller.js";
 
 const r = Router();
 
