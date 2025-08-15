@@ -1,10 +1,10 @@
 import { configDotenv } from "dotenv";
 import express from "express";
 import cors from 'cors';
-import {connectDB} from "./db.js"
-import postRoutes from './routes/post.routes.js'
-import {notFound, errorHandler} from "./middleware/error.js";
-import authRoutes from "./routes/auth.routes.js";
+import {connectDB} from "./src/db.js"
+import postRoutes from './src/routes/post.routes.js'
+import {notFound, errorHandler} from "./src/middleware/error.js";
+import authRoutes from "./src/routes/auth.routes.js";
 
 configDotenv();
  connectDB();
