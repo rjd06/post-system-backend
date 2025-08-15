@@ -8,8 +8,8 @@ import authRoutes from "./routes/auth.routes.js";
 
 configDotenv();
  connectDB();
-
- console.log(process.env.MONGO_URI)
+ 
+//  console.log(process.env.MONGO_URI)
 const app = express();
 app.use(cors());
 app.use(express.json({limit: "2mb"}));

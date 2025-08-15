@@ -1,7 +1,7 @@
 import Post from "../models/Post.js"
 import {asyncHandler} from "../middleware/asyncHandler.js"
 
-export const createPost = asyncHandler(async(requestAnimationFrame, res)=>{
+export const createPost = asyncHandler(async(req, res)=>{
     const {type, text, articleHtml} = req.body;
     let mediaUrl = null, mediaType= null;
 
