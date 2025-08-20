@@ -7,7 +7,7 @@ export const createPost = asyncHandler(async(req, res)=>{
 
     if(req.file){
         mediaUrl = req.file.path;
-        mediaType = req.file.mimeType.startsWith("video")?"video":"image";
+        mediaType = req.file.mimetype.startsWith("video")?"video":"image";
     };
 
     const post = await Post.create({
