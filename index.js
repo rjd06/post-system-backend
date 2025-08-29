@@ -11,7 +11,14 @@ configDotenv();
  
 //  console.log(process.env.MONGO_URI)
 const app = express();
-app.use(cors());
+
+// ✅ Allow your Vercel frontend
+app.use(cors({
+  origin: ["https://blackpost.vercel.app"], // your frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json({limit: "2mb"}));
 app.use(express.urlencoded({extended: true}));
 
