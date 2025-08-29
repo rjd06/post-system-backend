@@ -23,7 +23,12 @@ export const createPost = asyncHandler(async(req, res)=>{
 });
 
 export const getPosts = asyncHandler(async (_req, res)=>{
-    const posts = await Post.find().sort({createdAt: -1}).limit(100).lean();
+    const posts = await Post.find()
+    .sort({createdAt: -1})
+    .limit(100)
+    .populate("userId", "name avatar")
+    .lean();
+
     res.json(posts);
 });
 
